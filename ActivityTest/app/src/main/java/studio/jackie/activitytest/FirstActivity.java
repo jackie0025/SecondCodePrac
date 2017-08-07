@@ -1,6 +1,7 @@
 package studio.jackie.activitytest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +21,15 @@ public class FirstActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+                //Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+
+                //Intent intent=new Intent("jackie.studio.activitytest.ACTION_START");
+                //intent.addCategory("android.intent.category.MY_CATEGORY");
+
+                //Intent intent=new Intent(Intent.ACTION_VIEW);
+               // intent.setData(Uri.parse("http://www.baidu.com"));
+                Intent intent=new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
                 startActivity(intent);
                 Toast.makeText(FirstActivity.this,"You clicked Button",
                         Toast.LENGTH_SHORT).show();
