@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="studio.jackie.activitytest">
+    package="studio.jackie.activitylifecycletest">
 
     <application
         android:allowBackup="true"
@@ -9,26 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".FirstActivity"
-            android:label="This is FirstActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SecondActivity"
-            android:launchMode="singleInstance">
-            <intent-filter>
-                <action android:name="jackie.studio.activitytest.ACTION_START" />
+        <activity android:name=".NormalActivity" />
+        <activity android:name=".DialogActivity"
+            android:theme="@android:style/Theme.Dialog">
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.MY_CATEGORY" />
-            </intent-filter>
         </activity>
-        <activity android:name=".ThirdActivity"></activity>
     </application>
 
 </manifest>
